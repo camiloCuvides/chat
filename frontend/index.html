@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chat WebSocket</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="status" class="status s-closed">Sin conexión</div>
+
+  <main id="login" class="card">
+    <h1>Entrar al chat</h1>
+    <div class="row">
+      <input id="nameInput" maxlength="20" placeholder="Tu nombre (2 a 20 caracteres)" autocomplete="off">
+      <button id="joinBtn" type="button">Entrar</button>
+    </div>
+    <p id="loginError" class="error"></p>
+  </main>
+
+  <main id="chat" class="hidden">
+    <aside>
+      <h2>Conectados (<span id="userCount">0</span>)</h2>
+      <ul id="users"></ul>
+    </aside>
+    <section class="conv">
+      <div id="messages"></div>
+      <div id="typing" class="typing"></div>
+      <div class="row">
+        <input id="msgInput" maxlength="500" placeholder="Escribe un mensaje..." autocomplete="off">
+        <button id="sendBtn" type="button">Enviar</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
